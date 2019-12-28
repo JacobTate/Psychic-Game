@@ -1,8 +1,77 @@
-#nameh1{
-    font-size:24px;
+body{
+    background-color: black;
 }
+/**the name **/
+#nameh1{
+    font-size:80px;
+    text-align: center;
+    font-family: 'Ma Shan Zheng', cursive;
+    padding-bottom: 30px;
+    color:blue;
+}
+/*the text for the wins and losses*/
+#gamediv{
+    text-align: center;
+    color:blue;
+}
+/*the div for the rules*/
 #closediv{
     width:300px;
-    height:500px;
-    background-color: blue;
+    height:300px;
+    background-color:darkgray;
+    text-align:right;
+    margin-left:42%;
+    border-radius: 10%;
+}
+/*the button to close the rules*/
+#rulesdivbutton{
+    float: right;
+   margin-top:7px;
+   border-radius: 100%;
+   margin-right:7px;
+}
+/*wins*/
+#winstext{
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color:blue;
+}
+/*losses*/
+#lossestext{
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color:blue;
+}
+/*guesses left*/
+#guessestext{
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color:blue;
+}
+/*your guess*/
+#guessedletter{
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color:blue;
+}
+/*the button for the rules*/
+#rules{
+    font-size:20px;
+    color:blue;
+   background-color: limegreen;
+   font-family: 'Pacifico', cursive;
+}
+/*the text in the rules div*/
+#rulesp{
+    font-size:40px;
+    text-align: center;
+    font-family:'Dancing Script', cursive;
+    line-height:50px;
+    padding-top:25px;
+    color:blue;
+    
 }

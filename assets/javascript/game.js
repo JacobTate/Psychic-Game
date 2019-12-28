@@ -10,7 +10,7 @@ var picked_letter = [];
 //gets the element by id for adding text
 var wins_text = document.getElementById("winstext")
 var losses_text = document.getElementById("lossestext")
-var guesses_text = document.getElementById("guessestext") 
+var guesses_text = document.getElementById("guessestext")
 var guessed_letter = document.getElementById("guessedletter")
 
 //the computer guess picks a random item from the array
@@ -33,27 +33,28 @@ var computer_guess = get_random_item();
 
 //detects when a key is pressed
 document.onkeyup = function (event) {
-    
+
     //removes 1 guess
     guesses--
-    
+
     //prints the nubmer of remaining guesses
     guesses_text.innerHTML = "guesses left: " + guesses
-   
+
     //determines what key was pressed
     var user_guess = event.key;
-  
+
     picked_letter.push(user_guess);
     guessed_letter.innerHTML = "your guess: " + picked_letter.join(' ,');
     //if the pressed key = the random key   
     if (user_guess === computer_guess) {
-        
+
+        alert("YOU WON!")
         //runs the reset function
         reset();
-//adds 1 to the wins
+        //adds 1 to the wins
         wins++
 
-//prints the number of wins to the screen
+        //prints the number of wins to the screen
         wins_text.innerHTML = "wins: " + wins
 
     }
@@ -66,38 +67,20 @@ document.onkeyup = function (event) {
         //adds 1 to the losses
         losses++
 
-//prints the number of losses to the screen
+        //prints the number of losses to the screen
         losses_text.innerHTML = "losses:" + losses
 
-        
-    }
 
-    if(user_guess === " "){
-        alert("letters only")
     }
 };
+
 //the code for the rules div
-function closediv(){
 document.getElementById("closediv").style.display = "none";
+
+function closediv() {
+    document.getElementById("closediv").style.display = "none";
 };
 
-function rules(){
+function rules() {
     document.getElementById("closediv").style.display = "block";
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

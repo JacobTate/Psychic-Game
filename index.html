@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Dancing+Script|Long+Cang|Ma+Shan+Zheng|Pacifico&display=swap"
+        rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -12,23 +14,33 @@
 
 <body>
 
-    
+    <!--the name-->
     <h1 id="nameh1">Psychic Game</h1>
+    <!--the div with the text in it-->
     <div id="gamediv">
+        <!--the text for the wins losses etc.-->
         <h4 id="winstext">wins:</h4>
         <h4 id="lossestext">losses:</h4>
         <h4 id="guessestext">guesses left: 9</h4>
         <h4 id="guessedletter">your guess:</h4>
-        <button id = "rules" onclick="rules();">click for rules</button>
+        <!--the button to open the rules-->
+        <button id="rules" onclick="rules();">click for rules
+        </button>
+        <!--the rules-->
+        <div id="closediv">
+            <!--the button-->
+            <button id="rulesdivbutton" onclick="closediv();">x</button>
+            <!--the text for the rules-->
+            <p id="rulesp">Press any letter to play.
+                The computer will pick a random letter,
+                you must guess the letter.
+            </p>
+        </div>
     </div>
-    <!--the rules-->
-    <div id="closediv">
-        <!--the button-->
-<button onclick="closediv();">text</button>
 
-    </div>
 
-   
+
+
     <!--javascript link-->
     <script src="assets/javascript/game.js"></script>
 </body>
