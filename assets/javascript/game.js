@@ -44,7 +44,7 @@ document.onkeyup = function (event) {
     var user_guess = event.key;
   
     picked_letter.push(user_guess);
-    guessed_letter.innerHTML = "your guess: " + picked_letter.join(' ');
+    guessed_letter.innerHTML = "your guess: " + picked_letter.join(' ,');
     //if the pressed key = the random key   
     if (user_guess === computer_guess) {
         
@@ -71,7 +71,19 @@ document.onkeyup = function (event) {
 
         
     }
+
+    if(user_guess === " "){
+        alert("letters only")
+    }
 };
+//the code for the rules div
+function closediv(){
+document.getElementById("closediv").style.display = "none";
+};
+
+function rules(){
+    document.getElementById("closediv").style.display = "block";
+}
 
 
 
