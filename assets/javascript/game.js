@@ -1,9 +1,19 @@
    //the letters to pick from
 var letter_array = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-var gusses = 9;
+//gusses = the number of guesses you get
+var guesses = 9;
+//setting the values to 0
 var wins = 0;
 var losses = 0;
+var guesses_so_far = 0;
 var picked_letter = [];   
+
+var wins_text = document.getElementById("winstext")
+var losses_text = document.getElementById("lossestext")
+
+
+
+
 
  //the computer guess picks a random item from the array
   var get_random_item = function() {
@@ -24,26 +34,33 @@ var computer_guess = get_random_item();
 
 //detects when a key is pressed
 document.onkeyup = function(event){
-    gusses--
+    guesses--
     //determines what key was pressed
   var user_guess = event.key;
    //if the pressed key = the random key 
 if(user_guess === computer_guess){
     alert("you win");  
     //runs the reset function
-    reset();  
+    reset();
+
     wins++
+    
+    wins_text.innerHTML = "wins: " + wins
 }
-if(gusses === 0){
+if(guesses === 0){
     alert("you lost")
     //runs the reset function
     reset();
+
     losses++
+
+losses_text.innerHTML = "losses:" + losses
+
     picked_letter.push(user_guess);
 }
 };
-document.getElementById("gamediv")
 
+   
 
 
 
