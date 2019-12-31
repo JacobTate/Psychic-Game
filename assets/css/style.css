@@ -16,12 +16,14 @@ body{
 }
 /*the div for the rules*/
 #closediv{
+    position: static;
     width:300px;
     height:300px;
     background-color:darkgray;
-    text-align:right;
-    margin-left:42%;
     border-radius: 10%;
+    margin-top:20px;
+    margin:auto;
+   
 }
 /*the button to close the rules*/
 #rulesdivbutton{

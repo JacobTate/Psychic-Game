@@ -44,7 +44,7 @@ document.onkeyup = function (event) {
     var user_guess = event.key;
 
     picked_letter.push(user_guess);
-    guessed_letter.innerHTML = "your guess: " + picked_letter.join(' ,');
+    guessed_letter.innerHTML = "your guess: " + picked_letter.join(', ');
     //if the pressed key = the random key   
     if (user_guess === computer_guess) {
 
@@ -59,7 +59,7 @@ document.onkeyup = function (event) {
 
     }
 
-    if (guesses === 0) {
+    if (guesses === 1) {
 
         //runs the reset function
         reset();
@@ -70,17 +70,30 @@ document.onkeyup = function (event) {
         //prints the number of losses to the screen
         losses_text.innerHTML = "losses:" + losses
 
-
+ 
     }
-};
+}
+
 
 //the code for the rules div
+//closed the div
 document.getElementById("closediv").style.display = "none";
-
+//when run by a button closes the div
 function closediv() {
     document.getElementById("closediv").style.display = "none";
 };
-
+//when run by a button opens the div 
 function rules() {
     document.getElementById("closediv").style.display = "block";
 }
+
+  //the hint
+  function hint(){
+    if (computer_guess === "q" || computer_guess === "w" || computer_guess === "e" || computer_guess === "r" || computer_guess === "t" || computer_guess === "y" || computer_guess === "u" || computer_guess === "i" || computer_guess === "o" || computer_guess === "p") {
+        alert("123")
+    }
+    else if(computer_guess === "a" || computer_guess === "s" || computer_guess === "d" || computer_guess === "f" || computer_guess === "g" || computer_guess === "h" || computer_guess === "j" || computer_guess === "k" || computer_guess === "l"){
+        alert("321")
+    }
+    else{alert("258")}
+    }
