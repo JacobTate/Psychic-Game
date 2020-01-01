@@ -26,11 +26,17 @@ var reset = function () {
     computer_guess = get_random_item();
     guesses = 10;
     picked_letter = [];
-    document.getElementById("hintdiv").style.display = "none";
-    var element = document.getElementById("ptag");
-    element.parentElement.removeChild(element)
-
 }
+//resets the hint
+var hintReset = function() {
+        //hides the hint div
+    document.getElementById("hintdiv").style.display = "none";
+    //gets the p tag by id
+    var element = document.getElementById("ptag");
+    //removes the p tag
+    element.parentElement.removeChild(element)
+}
+
 
 //stores the functions output in a variable
 var computer_guess = get_random_item();
@@ -61,6 +67,9 @@ document.onkeyup = function (event) {
         //prints the number of wins to the screen
         wins_text.innerHTML = "wins: " + wins
 
+        //runs the reset for the hint
+      hintReset();
+
     }
 
     if (guesses === 1) {
@@ -74,8 +83,11 @@ document.onkeyup = function (event) {
         //prints the number of losses to the screen
         losses_text.innerHTML = "losses:" + losses
 
+   //runs the reset for the hint
+   hintReset();
 
     }
+      
 }
 
 
@@ -105,6 +117,7 @@ function hint() {
         element.appendChild(document.createTextNode("Top Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
+       
     }
     //the home row
     else if (computer_guess === "a" || computer_guess === "s" || computer_guess === "d" || computer_guess === "f" || computer_guess === "g" || computer_guess === "h" || computer_guess === "j" || computer_guess === "k" || computer_guess === "l") {
@@ -118,6 +131,7 @@ function hint() {
         element.appendChild(document.createTextNode("Home Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
+       
     }
     //the bottom row
     else {
@@ -131,6 +145,7 @@ function hint() {
         element.appendChild(document.createTextNode("Bottom Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
+       
     }
 }
 //hides the hint div 

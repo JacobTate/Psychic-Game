@@ -1,103 +1,133 @@
-body{
+body {
     background-color: black;
 }
+
 /**the name **/
-#nameh1{
-    font-size:80px;
+
+#nameh1 {
+    font-size: 80px;
     text-align: center;
     font-family: 'Ma Shan Zheng', cursive;
     padding-bottom: 30px;
-    color:blue;
+    color: blue;
 }
+
 /*the text for the wins and losses*/
-#gamediv{
+
+#gamediv {
     text-align: center;
-    color:blue;
+    color: blue;
 }
+
 /*the div for the rules*/
-#rulesdiv{
+
+#rulesdiv {
     position: static;
-    width:300px;
-    height:300px;
-    background-color:darkgray;
+    width: 300px;
+    height: 300px;
+    background-color: darkgray;
     border-radius: 10%;
-    margin-top:20px;
-    margin:auto;
-   
-}
-/*the button to close the rules*/
-#rulesdivbutton{
-    float: right;
-   margin-top:7px;
-   border-radius: 100%;
-   margin-right:7px;
-}
-/*wins*/
-#winstext{
-    padding-bottom: 20px;
-    font-size: 55px;
-    font-family: 'Long Cang', cursive;
-    color:blue;
-}
-/*losses*/
-#lossestext{
-    padding-bottom: 20px;
-    font-size: 55px;
-    font-family: 'Long Cang', cursive;
-    color:blue;
-}
-/*guesses left*/
-#guessestext{
-    padding-bottom: 20px;
-    font-size: 55px;
-    font-family: 'Long Cang', cursive;
-    color:blue;
-}
-/*your guess*/
-#guessedletter{
-    padding-bottom: 20px;
-    font-size: 55px;
-    font-family: 'Long Cang', cursive;
-    color:blue;
-}
-/*the button for the rules*/
-#rules{
-    font-size:20px;
-    color:blue;
-   background-color: limegreen;
-   font-family: 'Pacifico', cursive;
-   margin-top:10px;
-}
-/*the text in the rules div*/
-#rulesp{
-    font-size:40px;
-    text-align: center;
-    font-family:'Dancing Script', cursive;
-    line-height:50px;
-    padding-top:25px;
-    color:blue;
-    
-}
-/*the hint button*/
-#buttondiv{
-    width:95px;
-    position: static; 
+    margin-top: 20px;
     margin: auto;
-    margin-top:10px;
 }
-#hint{
-    width:95px;
-    font-size:25px;
+
+/*the button to close the rules*/
+
+#rulesdivbutton {
+    float: right;
+    margin-top: 7px;
+    border-radius: 100%;
+    margin-right: 7px;
+}
+
+/*wins*/
+
+#winstext {
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color: blue;
+}
+
+/*losses*/
+
+#lossestext {
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color: blue;
+}
+
+/*guesses left*/
+
+#guessestext {
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color: blue;
+}
+
+/*your guess*/
+
+#guessedletter {
+    padding-bottom: 20px;
+    font-size: 55px;
+    font-family: 'Long Cang', cursive;
+    color: blue;
+}
+
+/*the button for the rules*/
+
+#rules {
+    font-size: 20px;
+    color: blue;
+    background-color: limegreen;
     font-family: 'Pacifico', cursive;
-    background-color:red;
-    color:blue;
+    margin-top: 10px;
 }
+
+/*the text in the rules div*/
+
+#rulesp {
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    line-height: 50px;
+    padding-top: 25px;
+    color: blue;
+}
+
+/*the hint button*/
+
+#buttondiv {
+    width: 95px;
+    position: static;
+    margin: auto;
+    margin-top: 10px;
+}
+
+#hint {
+    width: 95px;
+    font-size: 25px;
+    font-family: 'Pacifico', cursive;
+    background-color: red;
+    color: blue;
+}
+
 /*the div for the hint*/
-#hintdiv{
-    width:300px;
-    height:150px;
-    background-color:darkgray;
-    margin:auto;
-    margin-top:15px;
+
+#hintdiv {
+    width: 300px;
+    height: 150px;
+    background-color: darkgray;
+    margin: auto;
+    margin-top: 15px;
     border-radius: 5%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 130px;
+    color: blue;
+    font-size: 60px;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
 }
