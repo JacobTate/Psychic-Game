@@ -26,9 +26,10 @@
         <!--the button to open the rules-->
         <button id="rules" onclick="rules();">click for rules
         </button>
+        
     </div>
-      <!--the rules-->
-      <div id="closediv">
+    <!--the rules-->
+    <div id="rulesdiv">
         <!--the button-->
         <button id="rulesdivbutton" onclick="closediv();">x</button>
         <!--the text for the rules-->
@@ -37,9 +38,12 @@
             you must guess the letter.
         </p>
     </div>
-<button onclick="hint();">hint</button>
-
-
+<!--the button for the hint-->
+    <div id = "buttondiv">
+    <button id = "hint" onclick="hint();">hint</button>
+</div>
+<!--the div for the hint-->
+<div id="hintdiv"></div>
 
     <!--javascript link-->
     <script src="assets/javascript/game.js"></script>

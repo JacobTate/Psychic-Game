@@ -15,7 +15,7 @@ body{
     color:blue;
 }
 /*the div for the rules*/
-#closediv{
+#rulesdiv{
     position: static;
     width:300px;
     height:300px;
@@ -66,6 +66,7 @@ body{
     color:blue;
    background-color: limegreen;
    font-family: 'Pacifico', cursive;
+   margin-top:10px;
 }
 /*the text in the rules div*/
 #rulesp{
@@ -76,4 +77,27 @@ body{
     padding-top:25px;
     color:blue;
     
+}
+/*the hint button*/
+#buttondiv{
+    width:95px;
+    position: static; 
+    margin: auto;
+    margin-top:10px;
+}
+#hint{
+    width:95px;
+    font-size:25px;
+    font-family: 'Pacifico', cursive;
+    background-color:red;
+    color:blue;
+}
+/*the div for the hint*/
+#hintdiv{
+    width:300px;
+    height:150px;
+    background-color:darkgray;
+    margin:auto;
+    margin-top:15px;
+    border-radius: 5%;
 }

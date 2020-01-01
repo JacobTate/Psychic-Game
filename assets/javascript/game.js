@@ -26,6 +26,10 @@ var reset = function () {
     computer_guess = get_random_item();
     guesses = 10;
     picked_letter = [];
+    document.getElementById("hintdiv").style.display = "none";
+    var element = document.getElementById("ptag");
+    element.parentElement.removeChild(element)
+
 }
 
 //stores the functions output in a variable
@@ -70,30 +74,64 @@ document.onkeyup = function (event) {
         //prints the number of losses to the screen
         losses_text.innerHTML = "losses:" + losses
 
- 
+
     }
 }
 
 
 //the code for the rules div
 //closed the div
-document.getElementById("closediv").style.display = "none";
+document.getElementById("rulesdiv").style.display = "none";
 //when run by a button closes the div
 function closediv() {
-    document.getElementById("closediv").style.display = "none";
+    document.getElementById("rulesdiv").style.display = "none";
 };
 //when run by a button opens the div 
 function rules() {
-    document.getElementById("closediv").style.display = "block";
+    document.getElementById("rulesdiv").style.display = "block";
 }
 
-  //the hint
-  function hint(){
+//the hint
+//the top row
+function hint() {
     if (computer_guess === "q" || computer_guess === "w" || computer_guess === "e" || computer_guess === "r" || computer_guess === "t" || computer_guess === "y" || computer_guess === "u" || computer_guess === "i" || computer_guess === "o" || computer_guess === "p") {
-        alert("123")
+        //displays the hidden div
+        document.getElementById("hintdiv").style.display = "block";
+        //creates a p tag 
+        var element = document.createElement("P");
+        //sets an id for the p tag
+        element.setAttribute("id", "ptag")
+        //writes in the p tag
+        element.appendChild(document.createTextNode("Top Row"));
+        //puts the p tag inside the div
+        document.getElementById("hintdiv").appendChild(element);
     }
-    else if(computer_guess === "a" || computer_guess === "s" || computer_guess === "d" || computer_guess === "f" || computer_guess === "g" || computer_guess === "h" || computer_guess === "j" || computer_guess === "k" || computer_guess === "l"){
-        alert("321")
+    //the home row
+    else if (computer_guess === "a" || computer_guess === "s" || computer_guess === "d" || computer_guess === "f" || computer_guess === "g" || computer_guess === "h" || computer_guess === "j" || computer_guess === "k" || computer_guess === "l") {
+        //displays the hidden div
+        document.getElementById("hintdiv").style.display = "block";
+        //creates a p tag 
+        var element = document.createElement("P");
+        //sets an id for the p tag
+        element.setAttribute("id", "ptag")
+        //writes in the p tag
+        element.appendChild(document.createTextNode("Home Row"));
+        //puts the p tag inside the div
+        document.getElementById("hintdiv").appendChild(element);
     }
-    else{alert("258")}
+    //the bottom row
+    else {
+        //displays the hidden div
+        document.getElementById("hintdiv").style.display = "block";
+        //creates a p tag 
+        var element = document.createElement("P");
+        //sets an id for the p tag
+        element.setAttribute("id", "ptag")
+        //writes in the p tag
+        element.appendChild(document.createTextNode("Bottom Row"));
+        //puts the p tag inside the div
+        document.getElementById("hintdiv").appendChild(element);
     }
+}
+//hides the hint div 
+document.getElementById("hintdiv").style.display = "none";
