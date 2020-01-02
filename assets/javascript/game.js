@@ -86,7 +86,7 @@ document.onkeyup = function (event) {
         //runs the reset for the hint
         hintReset();
 
-   }
+    }
 
 }
 
