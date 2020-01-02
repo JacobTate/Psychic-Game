@@ -131,3 +131,10 @@ body {
     font-family: 'Dancing Script', cursive;
     font-weight: 600;
 }
+
+/*the button to close the hint*/
+
+#hintButton {
+    float: right;
+    border-radius: 50%;
+}

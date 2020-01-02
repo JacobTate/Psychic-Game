@@ -28,8 +28,8 @@ var reset = function () {
     picked_letter = [];
 }
 //resets the hint
-var hintReset = function() {
-        //hides the hint div
+var hintReset = function () {
+    //hides the hint div
     document.getElementById("hintdiv").style.display = "none";
     //gets the p tag by id
     var element = document.getElementById("ptag");
@@ -68,7 +68,7 @@ document.onkeyup = function (event) {
         wins_text.innerHTML = "wins: " + wins
 
         //runs the reset for the hint
-      hintReset();
+        hintReset();
 
     }
 
@@ -83,13 +83,12 @@ document.onkeyup = function (event) {
         //prints the number of losses to the screen
         losses_text.innerHTML = "losses:" + losses
 
-   //runs the reset for the hint
-   hintReset();
+        //runs the reset for the hint
+        hintReset();
 
-    }
-      
+   }
+
 }
-
 
 //the code for the rules div
 //closed the div
@@ -117,7 +116,7 @@ function hint() {
         element.appendChild(document.createTextNode("Top Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
-       
+
     }
     //the home row
     else if (computer_guess === "a" || computer_guess === "s" || computer_guess === "d" || computer_guess === "f" || computer_guess === "g" || computer_guess === "h" || computer_guess === "j" || computer_guess === "k" || computer_guess === "l") {
@@ -131,7 +130,7 @@ function hint() {
         element.appendChild(document.createTextNode("Home Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
-       
+
     }
     //the bottom row
     else {
@@ -145,7 +144,7 @@ function hint() {
         element.appendChild(document.createTextNode("Bottom Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
-       
+
     }
 }
 //hides the hint div 
