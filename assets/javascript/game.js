@@ -6,26 +6,25 @@ var guesses = 9;
 var wins = 0;
 var losses = 0;
 var picked_letter = [];
-
 //gets the element by id for adding text
-var wins_text = document.getElementById("winstext")
-var losses_text = document.getElementById("lossestext")
-var guesses_text = document.getElementById("guessestext")
-var guessed_letter = document.getElementById("guessedletter")
-
+var wins_text = document.getElementById("winstext");
+var losses_text = document.getElementById("lossestext");
+var guesses_text = document.getElementById("guessestext");
+var guessed_letter = document.getElementById("guessedletter");
 //the computer guess picks a random item from the array
 var get_random_item = function () {
-
     random_item = letter_array[Math.floor(Math.random() * letter_array.length)];
     //logs the computer guess
-    console.log(random_item)
-    return random_item
+    console.log(random_item);
+    return random_item;
 }
 //resets the guessed letters and picks a new random letter
 var reset = function () {
     computer_guess = get_random_item();
     guesses = 10;
     picked_letter = [];
+    guesses_text.innerHTML = "guesses left: " + guesses;
+    guessed_letter.innerHTML = "your guess: " + picked_letter.join(', ');
 }
 //resets the hint
 var hintReset = function () {
@@ -34,62 +33,43 @@ var hintReset = function () {
     //gets the p tag by id
     var element = document.getElementById("ptag");
     //removes the p tag
-    element.parentElement.removeChild(element)
-}
-
-
+    element.parentElement.removeChild(element);
+};
 //stores the functions output in a variable
 var computer_guess = get_random_item();
-
 //detects when a key is pressed
 document.onkeyup = function (event) {
-
     //removes 1 guess
-    guesses--
-
+    guesses--;
     //prints the nubmer of remaining guesses
-    guesses_text.innerHTML = "guesses left: " + guesses
-
+    guesses_text.innerHTML = "guesses left: " + guesses;
     //determines what key was pressed
     var user_guess = event.key;
-
     picked_letter.push(user_guess);
     guessed_letter.innerHTML = "your guess: " + picked_letter.join(', ');
     //if the pressed key = the random key   
     if (user_guess === computer_guess) {
-
-        alert("YOU WON!")
+        alert("YOU WON!");
         //runs the reset function
         reset();
         //adds 1 to the wins
-        wins++
-
+        wins++;
         //prints the number of wins to the screen
-        wins_text.innerHTML = "wins: " + wins
-
+        wins_text.innerHTML = "wins: " + wins;
         //runs the reset for the hint
         hintReset();
-
-    }
-
+    };
     if (guesses === 1) {
-
         //runs the reset function
         reset();
-
         //adds 1 to the losses
         losses++
-
         //prints the number of losses to the screen
-        losses_text.innerHTML = "losses:" + losses
-
+        losses_text.innerHTML = "losses:" + losses;
         //runs the reset for the hint
         hintReset();
-
-    }
-
-}
-
+    };
+};
 //the code for the rules div
 //closed the div
 document.getElementById("rulesdiv").style.display = "none";
@@ -100,8 +80,7 @@ function closediv() {
 //when run by a button opens the div 
 function rules() {
     document.getElementById("rulesdiv").style.display = "block";
-}
-
+};
 //the hint
 //the top row
 function hint() {
@@ -116,7 +95,6 @@ function hint() {
         element.appendChild(document.createTextNode("Top Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
-
     }
     //the home row
     else if (computer_guess === "a" || computer_guess === "s" || computer_guess === "d" || computer_guess === "f" || computer_guess === "g" || computer_guess === "h" || computer_guess === "j" || computer_guess === "k" || computer_guess === "l") {
@@ -130,7 +108,6 @@ function hint() {
         element.appendChild(document.createTextNode("Home Row"));
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
-
     }
     //the bottom row
     else {
@@ -145,7 +122,7 @@ function hint() {
         //puts the p tag inside the div
         document.getElementById("hintdiv").appendChild(element);
 
-    }
-}
+    };
+};
 //hides the hint div 
 document.getElementById("hintdiv").style.display = "none";
