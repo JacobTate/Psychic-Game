@@ -1,7 +1,8 @@
 # Psychic-Game
 javascript game
+<img src="./assets/images/Screenshot (2).png">
 https://jacobtate.github.io/Psychic-Game/index.html
-# Created by Jacob Tate for homework
+# Created by Jacob Tate
 To play you press a letter.
 the computer randomly picks a letter you must guess the letter.
 you can press non letter keys. but the computer will not pick a non letter.
